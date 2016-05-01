@@ -47,6 +47,7 @@ config_topmost=0
 
 ####Construir categorias e ficheiros associados a categorias 
 #####categoria.list
+- ficheiro onde estão guardadas todas as categorias de ficheiros
 - deve ser introduzido o identificador e o nome da categoria neste formato
 
 Formato:
@@ -60,6 +61,7 @@ Ex:
 ```
 
 #####bins.list
+- ficheiro onde todos os caminhos e nomes de executáveis estão guardados
 - deve ser introduzido o id da aplicação dentro da categoria, o id da categoria, o nome da aplicação a mostrar, o executável, a pasta relativa do executável e nada em frente
 
 Formato:
