@@ -8,7 +8,8 @@
 
 Portable launcher for removable drives (multi-language via lang file)
 
-<h2>Generic Information
+## Generic Information
+
 ```
 Language ..........: AutoIt
 Type ..............: Script
@@ -29,10 +30,10 @@ Lines .............: 271
 ; =============================================================
 ```
 
-###pt_PT
+### pt_PT
 
-####Configurações gerais
-#####launcher.cfg (ini file)
+#### Configurações gerais
+##### launcher.cfg (ini file)
 
 ```
 # Actualizar lista ao iniciar (1 - sim, 0 - não)
@@ -45,8 +46,8 @@ config_clseonlnch=0
 config_topmost=0
 ```
 
-####Construir categorias e ficheiros associados a categorias 
-#####categoria.list
+#### Construir categorias e ficheiros associados a categorias 
+##### categoria.list
 - ficheiro onde estão guardadas todas as categorias de ficheiros
 - deve ser introduzido o identificador e o nome da categoria neste formato
 
@@ -60,7 +61,7 @@ Ex:
 1,Aplicações e Jogos
 ```
 
-#####bins.list
+##### bins.list
 - ficheiro onde todos os caminhos e nomes de executáveis estão guardados
 - deve ser introduzido o id da aplicação dentro da categoria, o id da categoria, o nome da aplicação a mostrar, o executável, a pasta relativa do executável e nada em frente
 
@@ -75,10 +76,10 @@ Exs:
 2,1,WoW,wow.exe,jogos\wow,nada
 ```
 
-###en_US
+### en_US
 
-####General aplication options
-#####launcher.cfg (ini file)
+#### General aplication options
+##### launcher.cfg (ini file)
 
 ```
 # Update list on startup (1 - yes, 0 - no)
@@ -91,8 +92,8 @@ config_clseonlnch=0
 config_topmost=0
 ```
 
-####Build categories and files associated with categories
-#####categoria.list
+#### Build categories and files associated with categories
+##### categoria.list
 - file where all file categories are stored
 - you must input the id and the category name after it
 
@@ -106,11 +107,11 @@ Ex:
 1,Applications and Games
 ```
 
-#####bins.list
+##### bins.list
 - file where all binary file paths and names are stored
 - you must input the id of the app inside the category, the category id, aplication name shown on the app, the executable name, relative folder of the executable and "nada" at last
 
-Formato:
+Format:
 ```
 App ID, Category ID, App Name, Executable file, Relative path, "nada"
 ```
