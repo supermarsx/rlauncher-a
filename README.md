@@ -78,7 +78,7 @@ Exs:
 
 ### en_US
 
-#### General aplication options
+#### General application options
 ##### launcher.cfg (ini file)
 
 ```
