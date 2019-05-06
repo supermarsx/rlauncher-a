@@ -1,123 +1,60 @@
-# AutoIt - rLauncher
-```
-     |                        |              
-,---.|    ,---..   .,---.,---.|---.,---.,---.
-|    |    ,---||   ||   ||    |   ||---'|    
-`    `---'`---^`---'`   '`---'`   '`---'`    
-```
+# rLauncher
 
-Portable launcher for removable drives (multi-language via lang file)
+A small multi-language portable launcher for removable drives, written in AutoIt, available only on Windows.
 
-## Generic Information
+## Quick Start
 
-```
-Language ..........: AutoIt
-Type ..............: Script
-Functions .........: 4
-Lines .............: 271
-```
+1. Download the latest release or in turn download the latest source and compile the script locally (require AutoIt installed).
+2. Update `launcher.cfg`to your liking.
+3. Add categories to `categoria.list` and binary paths to `bins.list`.
+4. Add `rlauncher` binary with `launcher.cfg`, `categoria.list` and `bins.list` to your removable or secondary drive.
 
-```
-; #INDEX# =====================================================
-; Title .........: rLauncher
-; Version .......: 1.0
-; AutoIt Version : 3.3.14.2
-; Language ......: MultiLanguage via config file (.ini)
-;                  pt_PT - original, en_US - translated
-; Description ...: Small launcher script for removable drives
-; Author(s) .....: Eduardo Mota
-; Dll ...........: -
-; =============================================================
-```
+## Adding applications
 
-### pt_PT
+To add applications you need to update `categoria.list`and `bins.list` accordingly.
 
-#### Configurações gerais
-##### launcher.cfg (ini file)
+### Adding a new category
+
+1. Open `categoria.list` file.
+2. Add a new line with id and chosen category name, csv style.
+3. Save file.
+
+Sample:
 
 ```
-# Actualizar lista ao iniciar (1 - sim, 0 - não)
-config_updtonlaunch=1
-# Linguagem do script (nome da secção no ficheiro de configuração: pt_PT, en_US)
-config_scriptlang="en_US"
-# Fechar depois de lançar aplicação (0 - não, 1 - sim)
-config_clseonlnch=0
-# Mantém a janela no topo de outras janelas (0 - não, 1 - sim)
-config_topmost=0
+ID,CATEGORY NAME
 ```
 
-#### Construir categorias e ficheiros associados a categorias 
-##### categoria.list
-- ficheiro onde estão guardadas todas as categorias de ficheiros
-- deve ser introduzido o identificador e o nome da categoria neste formato
+### Adding a new application
 
-Formato:
-```
-ID,Nome da Categoria
-```
+To add a new application you'll need to associate it to a category, to add a new category check Adding a new category.
 
-Ex:
-```
-1,Aplicações e Jogos
-```
+1. Open `bins.list` file.
+2. Add a new line following the sample down below, csv style.
+3. Save file.
 
-##### bins.list
-- ficheiro onde todos os caminhos e nomes de executáveis estão guardados
-- deve ser introduzido o id da aplicação dentro da categoria, o id da categoria, o nome da aplicação a mostrar, o executável, a pasta relativa do executável e nada em frente
-
-Formato:
-```
-ID App, ID Categoria, Nome da Aplicação, Nome Executável, Caminho Relativo, nada
-```
-
-Exs:
-```
-1,1,Exemplo,exemplo.exe,apps\exemplo,nada
-2,1,WoW,wow.exe,jogos\wow,nada
-```
-
-### en_US
-
-#### General application options
-##### launcher.cfg (ini file)
+Sample:
 
 ```
-# Update list on startup (1 - yes, 0 - no)
-config_updtonlaunch=1
-# Script Language (Section name on configuration file: pt_PT, en_US)
-config_scriptlang="en_US"
-# Close after launching app (0 - no, 1 - yes)
-config_clseonlnch=0
-# Keep window on top of other (topmost feature) (0 - no, 1 - yes)
-config_topmost=0
+APPLICATION ID,CATEGORY ID, APPLICATION NAME, BINARY NAME, RELATIVE BINARY PATH, "nada"
 ```
 
-#### Build categories and files associated with categories
-##### categoria.list
-- file where all file categories are stored
-- you must input the id and the category name after it
+ Note: Last field `nada` was reserved for future use.
 
-Format:
-```
-ID, Category name
-```
+## Mini QA
 
-Ex:
-```
-1,Applications and Games
-```
+Q. Does this work with USB thumb drives?
 
-##### bins.list
-- file where all binary file paths and names are stored
-- you must input the id of the app inside the category, the category id, aplication name shown on the app, the executable name, relative folder of the executable and "nada" at last
+A. Yes, this works with any removable drive as it uses relative paths to binary files.
 
-Format:
-```
-App ID, Category ID, App Name, Executable file, Relative path, "nada"
-```
+Q. Does this work on Windows Vista?
 
-Exs:
-```
-1,1,Example,example.exe,apps\example,nada
-2,1,WoW,wow.exe,games\wow,nada
-```
+A. This application works on any computer with any Windows from XP onwards.
+
+Q. Can I omit a category without updating `bins.list`?
+
+A. Yes but any applications within that category won't be visible on the launcher app.
+
+## License
+
+Distributed under MIT License. See `license.md` for more information.
