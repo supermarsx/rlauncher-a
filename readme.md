@@ -1,6 +1,8 @@
 # rLauncher
 
-![rLauncher app](https://github.com/eduardomota/rlauncher-a/raw/master/application.png)  
+``` Descontinued, still functional though ```
+
+![rLauncher app](https://github.com/supermarsx/rlauncher-a/raw/master/application.png)  
 
 A small multi-language portable launcher for removable drives, written in AutoIt, available only on Windows.
 
